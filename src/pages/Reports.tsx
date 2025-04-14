@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Calendar, Download, Filter, Share2, ClipboardList } from 'lucide-react';
+import { Calendar, Download, Filter, Share2, ClipboardList, TrendingUp, PieChart as PieChartIcon } from 'lucide-react';
 
 const Reports = () => {
   const [timeRange, setTimeRange] = useState('1y');
@@ -128,7 +128,7 @@ const Reports = () => {
             <LineChart data={performanceData[timeRange]}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis dataKey="name" />
-              <YAxis tickFormatter={(value) => `${value}%`} />
+              <YAxis format={(value) => `${value}%`} />
               <Tooltip formatter={(value) => [`${value}%`, undefined]} />
               <Legend />
               <Line 
@@ -249,7 +249,7 @@ const Reports = () => {
                 { 
                   title: 'Holdings Report', 
                   description: 'Complete breakdown of all current portfolio holdings',
-                  icon: <PieChart size={24} className="text-amber-500" />
+                  icon: <PieChartIcon size={24} className="text-amber-500" />
                 }
               ].map((report, i) => (
                 <div key={i} className="p-4 border rounded-lg flex flex-col items-center text-center">
