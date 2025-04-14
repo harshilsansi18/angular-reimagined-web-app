@@ -63,12 +63,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Angular-inspired color palette
-				'angular-red': '#DD0031',
-				'angular-red-dark': '#C3002F',
-				'angular-black': '#1A1A1A',
-				'angular-gray': '#F1F1F1',
-				'angular-light-gray': '#FAFAFA',
+				// Finance-inspired color palette
+				'finance-blue': {
+					50: '#eff6ff',
+					100: '#dbeafe',
+					200: '#bfdbfe',
+					300: '#93c5fd',
+					400: '#60a5fa',
+					500: '#3b82f6',
+					600: '#2563eb',
+					700: '#1d4ed8',
+					800: '#1e40af',
+					900: '#1e3a8a',
+					950: '#172554',
+				},
+				'finance-dark': '#0a1631',
+				'finance-light': '#f9fafc',
+				'finance-gray': '#f2f5f9',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -77,20 +88,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				},
 				'spinner': {
 					'0%': { transform: 'rotate(0deg)' },
@@ -101,6 +104,9 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'spinner': 'spinner 1s linear infinite'
+			},
+			boxShadow: {
+				'finance': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
 			}
 		}
 	},

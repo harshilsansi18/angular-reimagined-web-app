@@ -6,9 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 import Dashboard from "./pages/Dashboard";
-import Heroes from "./pages/Heroes";
-import Forms from "./pages/Forms";
-import Charts from "./pages/Charts";
+import Investments from "./pages/Investments";
+import Transactions from "./pages/Transactions";
+import Portfolio from "./pages/Portfolio";
+import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -23,9 +24,10 @@ const App = () => (
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/heroes" element={<Heroes />} />
-            <Route path="/forms" element={<Forms />} />
-            <Route path="/charts" element={<Charts />} />
+            <Route path="/investments" element={<Investments />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />
