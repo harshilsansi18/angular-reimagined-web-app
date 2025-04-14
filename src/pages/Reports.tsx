@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -128,7 +127,7 @@ const Reports = () => {
             <LineChart data={performanceData[timeRange]}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis dataKey="name" />
-              <YAxis format={(value) => `${value}%`} />
+              <YAxis tickFormatter={(value) => `${value}%`} />
               <Tooltip formatter={(value) => [`${value}%`, undefined]} />
               <Legend />
               <Line 
@@ -174,7 +173,7 @@ const Reports = () => {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={incomeData} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
-                <XAxis type="number" formatter={(value) => `$${value}`} />
+                <XAxis type="number" format={(value) => `$${value}`} />
                 <YAxis dataKey="name" type="category" width={100} />
                 <Tooltip formatter={(value) => [`$${value}`, 'Amount']} />
                 <Legend />
