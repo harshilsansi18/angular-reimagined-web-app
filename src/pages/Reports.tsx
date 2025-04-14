@@ -173,7 +173,7 @@ const Reports = () => {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={incomeData} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
-                <XAxis type="number" format={(value) => `$${value}`} />
+                <XAxis type="number" tickFormatter={(value) => `$${value}`} />
                 <YAxis dataKey="name" type="category" width={100} />
                 <Tooltip formatter={(value) => [`$${value}`, 'Amount']} />
                 <Legend />
